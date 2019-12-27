@@ -1,4 +1,4 @@
-class IngredientsController < ApplicationController
+class Api::V1::IngredientsController < ApplicationController
 
     def show
     end
