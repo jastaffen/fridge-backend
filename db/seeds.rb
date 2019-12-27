@@ -47,7 +47,13 @@ u2i8 = UserIngredient.create(user_id: 2, ingredient_id: 8)
 
 #Recipes: api_id, title, image
 
-apple_pie = Recipe.create(api_id: 2451, title: "Apple Pie", image: "https://images-gmi-pmc.edge-generalmills.com/173da066-c6b4-45dd-9b28-0d459cf6f169.jpg")
+apple_pie = Recipe.create(api_id: 2451, title: "Apple Pie", image: "https://images-gmi-pmc.edge-generalmills.com/173da066-c6b4-45dd-9b28-0d459cf6f169.jpg", 
+instructions: ["Preheat oven to 375 degrees F.", 
+"In a medium-mixing bowl cut the shortening and salt into the flour by hand or with a pastry blender hands until it's the texture of cornmeal. Sprinkle 1 tablespoon of ice water over the mixture and mix just until the dough is moistened. Repeat by adding 6 to 8 tablespoons water (one at a time) until all the dough is just moist. Take care not to over mix.", 
+"Preheat the oven to 375 degrees F. Divide the dough in half and roll into a ball. Roll 1 ball into a circle to fit a 9 to 10-inch pie plate. To transfer the pastry to the pie plate, wrap it around a rolling pin and ease it into the pie plate. Be careful not to stretch the pastry. Trim it even with the edges of the pie plate. Add the apple filling into the pastry lined pie plate. Make sure they are laying flat. Cut butter into small pieces and put on top of the filling.", 
+"Roll the remaining pastry into a 12-inch circle. Place on top of the filling. Trim off 1-inch beyond the edge of the pie plate. Crimp the edges as desired. Cut slits to allow steam to escape when baking. Sprinkle a little sugar and cinnamon over the pie.", 
+"Cover the edges with foil to prevent over browning. Bake for 25 minutes. Remove the foil and bake for another 20 to 25 minutes, or until it is golden brown. Serve warm with vanilla ice cream.", 
+"In a medium bowl combine the apples, with the brown and white sugar. Add flour, cinnamon and continue mixing until they are well coated."])
 butter_chicken = Recipe.create(api_id: 3351, title: "Butter Chicken", image: "https://www.simplyrecipes.com/wp-content/uploads/2019/01/Butter-Chicken-LEAD-5.jpg")
 
 #Recipe Ingredients: recipe_id, ingredient_id
