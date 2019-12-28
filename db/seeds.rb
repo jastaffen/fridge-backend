@@ -33,16 +33,16 @@ baking_soda = Ingredient.create(name: 'baking soda', amount: 16.0, unit: 'oz')
 
 #UserIngredients: user_id, ingredient_id
 
-ui1 = UserIngredient.create(user_id: 1, ingredient_id: 1)
-u1i2 = UserIngredient.create(user_id: 1, ingredient_id: 2)
-u1i3 = UserIngredient.create(user_id: 1, ingredient_id: 3)
-u1i7 = UserIngredient.create(user_id: 1, ingredient_id: 7)
+ui1 = UserIngredient.create(user: jack, ingredient: curry_paste)
+u1i2 = UserIngredient.create(user: jack, ingredient: filet_mignon)
+u1i3 = UserIngredient.create(user: jack, ingredient: butter)
+u1i7 = UserIngredient.create(user: jack, ingredient: chicken)
 
-u2i3 = UserIngredient.create(user_id: 2, ingredient_id: 3)
-u2i4 = UserIngredient.create(user_id: 2, ingredient_id: 4)
-u2i5 = UserIngredient.create(user_id: 2, ingredient_id: 5)
-u2i6 = UserIngredient.create(user_id: 2, ingredient_id: 6)
-u2i8 = UserIngredient.create(user_id: 2, ingredient_id: 8)
+u2i3 = UserIngredient.create(user: sam, ingredient: butter)
+u2i4 = UserIngredient.create(user: sam, ingredient: flour)
+u2i5 = UserIngredient.create(user: sam, ingredient: cinnamon)
+u2i6 = UserIngredient.create(user: sam, ingredient: egg)
+u2i8 = UserIngredient.create(user: sam, ingredient: apple)
 
 
 #Recipes: api_id, title, image
@@ -58,13 +58,13 @@ butter_chicken = Recipe.create(api_id: 3351, title: "Butter Chicken", image: "ht
 
 #Recipe Ingredients: recipe_id, ingredient_id
 
-r1i3 = RecipeIngredient.create(recipe_id: 1, ingredient_id: 3)
-r1i4 = RecipeIngredient.create(recipe_id: 1, ingredient_id: 4)
-r1i5 = RecipeIngredient.create(recipe_id: 1, ingredient_id: 5)
-r1i6 = RecipeIngredient.create(recipe_id: 1, ingredient_id: 6)
-r1i8 = RecipeIngredient.create(recipe_id: 1, ingredient_id: 8)
-r1i9 = RecipeIngredient.create(recipe_id: 1, ingredient_id: 9)
+r1i3 = RecipeIngredient.create(recipe: apple_pie, ingredient: butter)
+r1i4 = RecipeIngredient.create(recipe: apple_pie, ingredient: flour)
+r1i5 = RecipeIngredient.create(recipe: apple_pie, ingredient: cinnamon)
+r1i6 = RecipeIngredient.create(recipe: apple_pie, ingredient: egg)
+r1i8 = RecipeIngredient.create(recipe: apple_pie, ingredient: apple)
+r1i9 = RecipeIngredient.create(recipe: apple_pie, ingredient: baking_soda)
 
-#userrecipes: user_id, recipe_id
+#userrecipes: user, recipe
 
-u1r1 = UserRecipe.create(user_id: 1, recipe_id: 1)
+u1r1 = UserRecipe.create(user: jack, recipe: apple_pie)
