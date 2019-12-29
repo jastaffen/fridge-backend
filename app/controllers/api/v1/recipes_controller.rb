@@ -1,6 +1,8 @@
 class Api::V1::RecipesController < ApplicationController
     skip_before_action :authorized, only: [:show]
+
     def index
+        
     end
 
     def show
