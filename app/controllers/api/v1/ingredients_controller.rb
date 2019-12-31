@@ -1,8 +1,8 @@
 class Api::V1::IngredientsController < ApplicationController
     skip_before_action :authorized, only: [:index]
 
-    def index
-        # Ingredient.ingredient_images
+    def index 
+        Ingredient.ingredient_images
         ingredients = Ingredient.all
         render json: { ingredients: ingredients } 
     end
