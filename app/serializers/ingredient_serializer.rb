@@ -1,3 +1,3 @@
 class IngredientSerializer < ActiveModel::Serializer
-    attributes :id, :name, :amount, :unit, :image
+    attributes :id, :name, :image
 end
