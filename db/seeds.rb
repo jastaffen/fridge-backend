@@ -5,7 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
 User.destroy_all
 Ingredient.destroy_all
 RecipeIngredient.destroy_all
@@ -21,22 +20,31 @@ sam = User.create(username: "samglick", password_digest: "2222", first_name: "Sa
 
 #Ingredients: name, amount, unit
 
-curry_paste = Ingredient.create(name: "curry paste", amount: 1.0, unit: "cup")
-filet_mignon = Ingredient.create(name: "filet mignon", amount: 24.0, unit: "oz")
-butter = Ingredient.create(name: "butter", amount: 16.0, unit: "tablespoons")
-flour = Ingredient.create(name: 'flour', amount: 50.0, unit: 'oz')
-cinnamon = Ingredient.create(name: 'cinnamon', amount: 1.0, unit: 'cup')
-egg = Ingredient.create(name: 'egg', amount: 12.0, unit: 'number')
-chicken = Ingredient.create(name: 'chicken', amount: 65.0, unit: 'oz')
-apple = Ingredient.create(name: 'apple', amount: 6, unit: 'number')
-baking_soda = Ingredient.create(name: 'baking soda', amount: 16.0, unit: 'oz')
+curry_paste = Ingredient.create(name: "curry paste")
+filet_mignon = Ingredient.create(name: "filet mignon")
+butter = Ingredient.create(name: "butter")
+flour = Ingredient.create(name: 'flour')
+cinnamon = Ingredient.create(name: 'cinnamon')
+egg = Ingredient.create(name: 'egg')
+chicken = Ingredient.create(name: 'chicken')
+apple = Ingredient.create(name: 'apple')
+baking_soda = Ingredient.create(name: 'baking soda')
+
+
+
+100.times do 
+    Ingredient.create(name: Faker::Food.ingredient)
+end
+
+
+
 
 #UserIngredients: user_id, ingredient_id
 
-ui1 = UserIngredient.create(user: jack, ingredient: curry_paste)
-u1i2 = UserIngredient.create(user: jack, ingredient: filet_mignon)
-u1i3 = UserIngredient.create(user: jack, ingredient: butter)
-u1i7 = UserIngredient.create(user: jack, ingredient: chicken)
+ui1 = UserIngredient.create(user: jack, ingredient: curry_paste, amount: 4.0, unit: "oz")
+u1i2 = UserIngredient.create(user: jack, ingredient: filet_mignon, amount: 24.0, unit: "oz")
+u1i3 = UserIngredient.create(user: jack, ingredient: butter, amount: 16.0, unit: "tablespoons")
+u1i7 = UserIngredient.create(user: jack, ingredient: chicken, amount: 4.5, unit: 'pounds')
 
 u2i3 = UserIngredient.create(user: sam, ingredient: butter)
 u2i4 = UserIngredient.create(user: sam, ingredient: flour)

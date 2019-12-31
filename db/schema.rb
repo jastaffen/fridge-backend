@@ -17,8 +17,6 @@ ActiveRecord::Schema.define(version: 2019_12_27_201927) do
 
   create_table "ingredients", force: :cascade do |t|
     t.string "name"
-    t.float "amount"
-    t.string "unit"
     t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -45,6 +43,8 @@ ActiveRecord::Schema.define(version: 2019_12_27_201927) do
   create_table "user_ingredients", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "ingredient_id"
+    t.decimal "amount"
+    t.string "unit"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["ingredient_id"], name: "index_user_ingredients_on_ingredient_id"
