@@ -32,9 +32,9 @@ baking_soda = Ingredient.create(name: 'baking soda')
 
 
 
-100.times do 
-    Ingredient.create(name: Faker::Food.ingredient)
-end
+# 50.times do 
+#     Ingredient.create(name: (Faker::Food.ingredient).downcase)
+# end
 
 
 

@@ -2,17 +2,18 @@ class Api::V1::IngredientsController < ApplicationController
     skip_before_action :authorized, only: [:index]
 
     def index 
-        Ingredient.ingredient_images
         ingredients = Ingredient.all
+        Ingredient.ingredient_images
         render json: { ingredients: ingredients } 
     end
 
     def create
         ingredient = Ingredient.create(ingredient_params)
         if ingredient.valid?
+            ingredient.ingredient_image
             render json: { ingredient: IngredientSerializer.new(ingredient) }
         else
-            render json: { error: 'failed to create ingredient' }
+            render json: { error: 'something went wrong. check to make sure that that ingredient does not already exist' }
         end
     end
 
