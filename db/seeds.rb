@@ -41,10 +41,10 @@ baking_soda = Ingredient.create(name: 'baking soda')
 
 #UserIngredients: user_id, ingredient_id
 
-ui1 = UserIngredient.create(user: jack, ingredient: curry_paste, amount: 4.0, unit: "oz")
+ui1 = UserIngredient.create(user: jack, ingredient: curry_paste, amount: 14.0, unit: "oz")
 u1i2 = UserIngredient.create(user: jack, ingredient: filet_mignon, amount: 24.0, unit: "oz")
-u1i3 = UserIngredient.create(user: jack, ingredient: butter, amount: 16.0, unit: "tablespoons")
-u1i7 = UserIngredient.create(user: jack, ingredient: chicken, amount: 4.5, unit: 'pounds')
+u1i3 = UserIngredient.create(user: jack, ingredient: butter, amount: 16.0, unit: "oz")
+u1i7 = UserIngredient.create(user: jack, ingredient: chicken, amount: 45, unit: 'oz')
 
 u2i3 = UserIngredient.create(user: sam, ingredient: butter)
 u2i4 = UserIngredient.create(user: sam, ingredient: flour)

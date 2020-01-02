@@ -1,5 +1,5 @@
 class Api::V1::IngredientsController < ApplicationController
-    skip_before_action :authorized, only: [:index]
+    # skip_before_action :authorized, only: [:index]
 
     def index 
         ingredients = Ingredient.all
@@ -8,7 +8,7 @@ class Api::V1::IngredientsController < ApplicationController
     end
 
     def create
-        ingredient = Ingredient.create(ingredient_params)
+        ingredient = Ingredient.create(name: ingredient_params[:name].downcase)
         if ingredient.valid?
             ingredient.ingredient_image
             render json: { ingredient: IngredientSerializer.new(ingredient) }
